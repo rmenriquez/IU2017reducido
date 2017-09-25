@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario insertar</title>
+</head>
+<body>
+<header> <h1> FORMULARIO DE ALTA </h1></header>
+    <form action="" method="post" name="insertForm" >
+    <label>DNI <br>
+        <input type="text" id="dni" name="DNI" maxlength="9" required/><br>
+    </label><br>
+    <label> Nombre<br>
+        <input type="text" id="nombre" name="Nombre" maxlength="30" required/><br>
+    </label><br>
+    <label> Apellidos<br>
+        <input type="text" id="apellidos" name="Apellidos" maxlength="50" required/><br>
+    </label><br>
+    <label> Teléfono<br>
+        <input type="text" id="telf" name="Telefono" maxlength="11" required/><br>
+    </label><br>
+    <label> E-mail<br>
+        <input type="text" id="mail" name="Mail" maxlength="60" required/><br>
+    </label><br>
+        <label> Fecha de Nacimiento<br>
+            <input type="text" id="nacimiento" name="FechaNacimiento" required/><br>
+        </label><br>
+    <label>Sexo</label><br>
+    <label> Mujer
+        <input type="radio" id="sexoM" name="Sexo" value="mujer" checked="checked" required/>
+    </label>
+    <label> Hombre
+        <input type="radio" id="sexoH" name="Sexo" value="hombre" required/>
+    </label> <br>
+        <br>
+        <br>
+        <button type="submit"> Enviar</button>
+    </form>
+</body>
+</html>
