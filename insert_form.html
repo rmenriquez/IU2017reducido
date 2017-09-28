@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script language="JavaScript" src="FuncionesValidacion.js"></script>
     <title>Formulario insertar</title>
 </head>
 <body>
 <header> <h1> FORMULARIO DE ALTA </h1></header>
     <form action="" method="post" name="insertForm" >
     <label>DNI <br>
-        <input type="text" id="dni" name="DNI" maxlength="9" required/><br>
+        <input type="text" id="dni" name="DNI" maxlength="9" required onblur="comprobarVacio(this),comprobarDni(this)"/><br>
     </label><br>
     <label> Nombre<br>
-        <input type="text" id="nombre" name="Nombre" maxlength="30" required/><br>
+        <input type="text" id="nombre" name="Nombre" maxlength="30" required onblur="comprobarVacio(this), comprobarTexto(this,30)"/><br>
     </label><br>
     <label> Apellidos<br>
-        <input type="text" id="apellidos" name="Apellidos" maxlength="50" required/><br>
+        <input type="text" id="apellidos" name="Apellidos" maxlength="50" required onblur="comprobarVacio(this),comprobarTexto(this,50)"/><br>
     </label><br>
     <label> Teléfono<br>
-        <input type="text" id="telf" name="Telefono" maxlength="11" required/><br>
+        <input type="text" id="telf" name="Telefono" maxlength="13" required onblur="comprobarVacio(this),comprobarTelf(this, 11)"/><br>
     </label><br>
     <label> E-mail<br>
-        <input type="text" id="mail" name="Mail" maxlength="60" required/><br>
+        <input type="text" id="mail" name="Mail" maxlength="60" required onblur="comprobarVacio(this), validarEmail(this,60)"/><br>
     </label><br>
         <label> Fecha de Nacimiento<br>
-            <input type="text" id="nacimiento" name="FechaNacimiento" required/><br>
+            <input type="text" class="tcal" id="nacimiento" name="Fecha Nacimiento" required onblur="comprobarVacio(this)"/><br>
         </label><br>
     <label>Sexo</label><br>
     <label> Mujer

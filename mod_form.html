@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script ></script>
     <title>Formulario modificar</title>
 </head>
 <body>
-
+<header> <h1> FORMULARIO DE MODIFICACIÓN </h1></header>
+<form action="" method="post" name="modForm" >
+    <label>DNI <br>
+        <input type="text" id="dni" name="DNI" maxlength="9" readonly/><br>
+    </label><br>
+    <label> Nombre<br>
+        <input type="text" id="nombre" name="Nombre" maxlength="30" required/><br>
+    </label><br>
+    <label> Apellidos<br>
+        <input type="text" id="apellidos" name="Apellidos" maxlength="50" required/><br>
+    </label><br>
+    <label> Teléfono<br>
+        <input type="text" id="telf" name="Telefono" maxlength="11" required/><br>
+    </label><br>
+    <label> E-mail<br>
+        <input type="text" id="mail" name="Mail" maxlength="60" readonly/><br>
+    </label><br>
+    <label> Fecha de Nacimiento<br>
+        <input type="text" class="tcal" id="nacimiento" name="Fecha Nacimiento" required/><br>
+    </label><br>
+    <label>Sexo</label><br>
+    <label> Mujer
+        <input type="radio" id="sexoM" name="Sexo" value="mujer" checked="checked" required/>
+    </label>
+    <label> Hombre
+        <input type="radio" id="sexoH" name="Sexo" value="hombre" required/>
+    </label> <br>
+    <br>
+    <br>
+    <button type="submit"> Modificar </button>
+</form>
 </body>
 </html>
