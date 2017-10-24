@@ -1,0 +1,405 @@
+<!-- Created by 0peox5 on 19/9/17. -->
+<!-- Página para la ET1 -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" lang="es">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <script language="JavaScript" src="js/validaciones.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+      <link href="css/tcal.css" rel="stylesheet">
+      <script src="js/tcal.js"></script>
+
+
+      <title>ET1</title>
+  </head>
+  <body>
+    <header id="header_main">
+      <h1> Gestión de usuarios </h1>
+      <div id="presentacion">
+        <div class="user">
+          <p class="login"> Hola Pmprieto!</p>
+          <p class="logout"><a href=""><img src="images/logout-512.png" height="40px" width="40px"></a></p>
+        </div>
+        <div class="icon">
+          <img src="images/indice.png.png" height="120px" width="120px">
+        </div>
+        <div class="navIdioma">
+          <ul>
+            <li><a href=""><img class="idioma" src="images/spanish_flag.jpg" alt="spanish"></a></li>
+            <li><a href=""><img class="idioma" src="images/galician_flag.jpg" alt="galician"></a></li>
+            <li><a href=""><img class="idioma" src="images/england_flag.jpg" alt="english"></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="contenidoPpal">
+      <div class="contenido">
+        <div id="menu">
+          <h3>Menú de gestiones</h3>
+          <ul>
+            <li class="nivel1 primera" tabindex="1"><span class="nivel1">Gestión de Alumnos</span>
+              <ul>
+                <li class="primera"><a href="">Alta de Alumno</a></li>
+                <li><a href="">Ver Alumnos</a></li>
+                <li><a href="">Buscar Alumno</a></li>
+              </ul>
+            </li>
+            <li class="nivel1" tabindex="2"><span class="nivel1">Gestión de Grupos</span>
+              <ul>
+                <li class="primera"><a href="">Alta de Grupo</a></li>
+                <li><a href="">Ver Grupos</a></li>
+                <li><a href="">Buscar Grupo</a></li>
+              </ul>
+            </li>
+            <li class="nivel1" tabindex="3"><span class="nivel1">Gestión de Titulaciones</span>
+              <ul>
+                <li class="primera"><a href="">Alta de Titulación</a></li>
+                <li><a href="">Ver Titulaciones</a></li>
+                <li><a href="">Buscar Titulación</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+          <div id="muestra">
+              <p>
+              <h2>Muestra de contenidos textuales y con hiperenlaces e imagenes</h2>
+              <h4>Grao en Enxeñaría Informática</h4>
+              Titulación vinculada ao exercicio da profesión de Enxeñeiro/a Técnico/a en Informática, de 240 ECTS repartidos
+              en catro cursos, incluido o Traballo Fin de Grao.
+              O titulado é un profesional cunha completa formación científica, tecnolóxica e socioeconómica,
+              que o prepara para o exercicio profesional no desenvolvemento e aplicación das tecnoloxías da información
+              e as comunicacións (TIC) no ámbito da Informática.<br>
+              <img src="images/pendulo.jpg" align="center"> <img src="images/politecnico_ou.jpg" align="center"><br>
+              Imagen de la escuela con enlace a la misma y dos enlaces más<br>
+              <a href="www.esei.uvigo.es"><img src="images/nombreESEI_Castellano.png"></a><br>
+              <a href="http://esei.uvigo.es/index.php?id=19">Web del Grado Superior de Ingeniería Informática</a><br>
+              <a href="https://www.w3schools.com/">Información interesante</a>
+              </p>
+          </div>
+        <div id="formularios">
+          <div class="formAlta">
+            <h2>FORMULARIO ADD</h2>
+            <form action="" method="post" name="insertForm" onsubmit=" return validarForm(this)">
+              <label>Login <br>
+                <input id="login" name="login" maxlength="25" required onchange="comprobarAlfabetico(this,25)" type="text"><br>
+              </label><br>
+              <label>Password<br>
+                <input id="pass" name="pass" minlength="4" maxlength="20" required onchange="comprobarTexto(this,20)" type="password"><br>
+              </label><br>
+              <label>DNI <br>
+                <input id="dni" name="DNI" maxlength="9" required onchange="comprobarDni(this)" type="text"><br>
+              </label><br>
+              <label> Nombre<br>
+                <input id="nombre" name="Nombre" maxlength="25" required onchange="comprobarTexto(this,25) " type="text"><br>
+              </label><br>
+              <label> Apellidos<br>
+                <input id="apellidos" name="Apellidos" maxlength="50" required onchange="comprobarTexto(this,50)"
+                  type="text"><br>
+              </label><br>
+              <label> Teléfono<br>
+                <input id="telf" name="Telefono" maxlength="13" required onchange="comprobarTelf(this, 13)"
+                  type="text"><br>
+              </label><br>
+              <label> E-mail<br>
+                <input id="mail" name="Mail" maxlength="50" required onchange="comprobarEmail(this,50)"
+                  type="text"><br>
+              </label><br>
+              <label> Fecha de Nacimiento<br>
+                <input class="tcal" type="date" id="nacimiento" required readonly name="Fecha_Nacimiento"  onchange="comprobarVacio(this)" ><br>
+              </label><br>
+                <label> Grupo de prácticas<br>
+                    <select name="grupo" onchange="comprobarSelect(this)">
+                        <option value="0">"--Seleccione un valor--"</option>
+                        <option value="IU1">IU1</option>
+                        <option value="IU2">IU2</option>
+                        <option value="IU3">IU3</option>
+                        <option value="IU4">IU4</option>
+                        <option value="IU5">IU5</option>
+                        <option value="IU6">IU6</option>
+                    </select><br>
+                </label><br>
+                <label> Curso académico<br>
+                    <input id="curso" name="Curso" maxlength="1" required onchange="comprobarEntero(this,1,9)"
+                           type="number"><br>
+                </label><br>
+                <label> Titulación<br>
+                    <input id="tit" name="Titulacion" maxlength="60" required onchange="comprobarTexto(this, 60)"
+                           type="text"><br>
+                </label><br>
+              <br>
+              <button type="submit"> Añadir </button>
+            </form>
+          </div><br>
+          <div class="formBuscar">
+            <h2>FORMULARIO SEARCH</h2>
+              <form action="" method="post" name="searchForm">
+                  <label>Login <br>
+                      <input id="loginS" name="login" maxlength="25"  onchange="comprobarAlfabetico(this,25)" type="text"><br>
+                  </label><br>
+                  <label>DNI <br>
+                      <input id="dniS" name="DNI" maxlength="9"  onchange="comprobarTexto(this,9)" type="text"><br>
+                  </label><br>
+                  <label> Nombre<br>
+                      <input id="nombreS" name="Nombre" maxlength="25"  onchange="comprobarTexto(this,30) " type="text"><br>
+                  </label><br>
+                  <label> Apellidos<br>
+                      <input id="apellidosS" name="Apellidos" maxlength="50"  onchange="comprobarTexto(this,50)"
+                             type="text"><br>
+                  </label><br>
+                  <label> Teléfono<br>
+                      <input id="telfS" name="Telefono" maxlength="13"  onchange="comprobarEntero(this,'600000000','0034999999999')"
+                             type="text"><br>
+                  </label><br>
+                  <label> E-mail<br>
+                      <input id="mailS" name="Mail" maxlength="50"  onchange="comprobarTexto(this,50)"
+                             type="text"><br>
+                  </label><br>
+                  <label> Fecha de Nacimiento<br>
+                      <input class="tcal" type="date" id="nacimientoS" readonly name="Fecha_Nacimiento"  onchange="comprobarVacio(this)" ><br>
+                  </label><br>
+                  <label> Grupo de prácticas<br>
+                      <select name="grupo" >
+                          <option value="0">"--Seleccione un valor--"</option>
+                          <option value="IU1">IU1</option>
+                          <option value="IU2">IU2</option>
+                          <option value="IU3">IU3</option>
+                          <option value="IU4">IU4</option>
+                          <option value="IU5">IU5</option>
+                          <option value="IU6">IU6</option>
+                      </select><br>
+                  </label><br>
+                  <label> Curso académico<br>
+                      <input id="cursoS" name="Curso" maxlength="1"  onchange="comprobarEntero(this,1,9)"
+                             type="number"><br>
+                  </label><br>
+                  <label> Titulación<br>
+                      <input id="titS" name="Titulacion" maxlength="60"  onchange="comprobarTexto(this, 60)"
+                             type="text"><br>
+                  </label><br>
+                  <br>
+                  <br>
+                  <button type="submit"> Buscar </button>
+              </form>
+          </div><br>
+            <div class="formEditar">
+                <form action="" method="post" name="editForm" onsubmit="return validarForm(this)">
+                <h2>FORMULARIO EDIT</h2>
+                <label>Login <br>
+                    <input id="loginE" name="login" maxlength="25" readonly value="aliasme" type="text"><br>
+                </label><br>
+                <label>DNI <br>
+                    <input id="dniE" name="DNI" maxlength="9" required readonly value="40061622S" type="text"><br>
+                </label><br>
+                <label> Nombre<br>
+                    <input id="nombreE" name="Nombre" maxlength="25" required value="Paula" onchange="comprobarTexto(this,25) " type="text"><br>
+                </label><br>
+                <label> Apellidos<br>
+                    <input id="apellidosE" name="Apellidos" maxlength="50" required value="Rodríguez Díaz" onchange="comprobarTexto(this,50)"
+                           type="text"><br>
+                </label><br>
+                <label> Teléfono<br>
+                    <input id="telfE" name="Telefono" maxlength="13" required value="988234167" onchange="comprobarTelf(this, 13)"
+                           type="text"><br>
+                </label><br>
+                <label> E-mail<br>
+                    <input id="mailE" name="Mail" maxlength="50" required value="prdiaz@esei.uvigo.es" onchange="comprobarEmail(this,50)"
+                           type="text"><br>
+                </label><br>
+                <label> Fecha de Nacimiento<br>
+                    <input class="tcal" type="date" id="nacimientoE" required readonly value="22/02/1992" name="Fecha_Nacimiento"  onchange="comprobarVacio(this)" ><br>
+                </label><br>
+                <label> Grupo de prácticas<br>
+                    <select name="grupo" required onchange="comprobarSelect(this)">
+                        <option value="">"--Seleccione un valor--"</option>
+                        <option value="IU1">IU1</option>
+                        <option value="IU2">IU2</option>
+                        <option value="IU3" selected>IU3</option>
+                        <option value="IU4">IU4</option>
+                        <option value="IU5">IU5</option>
+                        <option value="IU6">IU6</option>
+                    </select><br>
+                </label><br>
+                <label> Curso académico<br>
+                    <input id="cursoE" name="Curso" maxlength="1" required value="3" onchange="comprobarEntero(this,1,9)"
+                           type="number"><br>
+                </label><br>
+                <label> Titulación<br>
+                    <input id="titE" name="Titulacion" maxlength="60" required value="Grado en Ingeniería Informática" onchange="comprobarTexto(this, 60)"
+                           type="text"><br>
+                </label><br>
+                    <br>
+                    <button type="submit"> Editar </button>
+                </form>
+            </div><br>
+        </div>
+          <div id="showall">
+              <h2> SHOWALL USUARIOS</h2>
+              <table class="showall">
+                  <tbody>
+                  <tr>
+                      <th class="titulo" colspan="4">USUARIOS</th>
+                      <th></th>
+                      <th><span class="table-add-search"><a href=""><img src="icons/search_icon-icons.com_69921.png"></a>
+                      <th><a href=""><img src="icons/plus-circle-1_icon-icons.com_69982.png"></a>
+                          </span>
+                      </th>
+                  </tr>
+                  <tr>
+                      <th>Login</th>
+                      <th>Nombre</th>
+                      <th>Apellidos</th>
+                      <th>Grupo de Prácticas</th>
+                  </tr>
+                  <tr>
+                      <td>aliasme</td>
+                      <td>Paula</td>
+                      <td>Rodríguez Díaz</td>
+                      <td>G3</td>
+                      <td>
+            <span class="table-more">
+                <a href=""><img src="icons/eye_icon-icons.com_70156.png"></a>
+            </span>
+                      </td>
+                      <td>
+            <span class="table-edit">
+                <a href=""><img src="icons/pencil_icon-icons.com_69999.png"></a>
+            </span>
+                      </td>
+                      <td>
+            <span class="table-remove">
+                <a href=""><img src="icons/trash_icon-icons.com_69838.png"></a>
+            </span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>pmprieto</td>
+                      <td>Pedro</td>
+                      <td>Martinez Prieto</td>
+                      <td>G5</td>
+                      <td>
+            <span class="table-more">
+                <a href=""><img src="icons/eye_icon-icons.com_70156.png"></a>
+            </span>
+                      </td>
+                      <td>
+            <span class="table-edit">
+                <a href=""><img src="icons/pencil_icon-icons.com_69999.png"></a>
+            </span>
+                      </td>
+                      <td>
+            <span class="table-remove">
+                <a href=""><img src="icons/trash_icon-icons.com_69838.png"></a>
+            </span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>scgomez</td>
+                      <td>Sergio</td>
+                      <td>Castro Gomez</td>
+                      <td>G2</td>
+                      <td>
+            <span class="table-more">
+                <a href=""><img src="icons/eye_icon-icons.com_70156.png"></a>
+            </span>
+                      </td>
+                      <td>
+            <span class="table-edit">
+                <a href=""><img src="icons/pencil_icon-icons.com_69999.png"></a>
+            </span>
+                      </td>
+                      <td>
+            <span class="table-remove">
+                <a href=""><img src="icons/trash_icon-icons.com_69838.png"></a>
+            </span>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div><br>
+          <div class="formDelete">
+              <h2>FORMULARIO DELETE</h2>
+              <form action="" method="post" name="deleteForm">
+                  <label>Login &emsp;
+                      <input id="loginD" name="login" maxlength="25" value="aliasme" readonly type="text"><br>
+                  </label><br>
+                  <label>DNI &emsp;
+                      <input id="dniD" name="DNI" maxlength="9" value="40061622S" readonly type="text"><br>
+                  </label><br>
+                  <label> Nombre &emsp;
+                      <input id="nombreD" name="Nombre" maxlength="30" value="Paula" readonly type="text"><br>
+                  </label><br>
+                  <label> Apellidos &emsp;
+                      <input id="apellidosD" name="Apellidos" maxlength="50" value="Rodriguez Díaz" readonly type="text"><br>
+                  </label><br>
+                  <label> Teléfono &emsp;
+                      <input id="telfD" name="Telefono" maxlength="13" value="988234167" readonly type="text"><br>
+                  </label><br>
+                  <label> E-mail &emsp;
+                      <input id="mailD" name="Mail" maxlength="50" value="prdiaz@esei.uvigo.es" readonly type="text"><br>
+                  </label><br>
+                  <label> Fecha de Nacimiento &emsp;
+                      <input id="nacimientoD" name="Fecha Nacimiento" value="22/02/1992" readonly type="date"><br>
+                  </label><br>
+                  <label> Grupo de Prácticas<br>
+                  <input id="grupoD" name="Grupo" value="IU3" readonly type="text"><br>
+                  </label><br>
+                  <label> Curso Académico<br>
+                      <input id="cursoD" name="Curso" maxlength="1" value="3" readonly type="text"><br>
+                  </label><br>
+                  <br>
+                  <button type="button" onclick="return preguntar()"> Borrar </button>
+              </form>
+          </div><br>
+          <div id="showcurrent">
+              <h2> SHOWCURRENT USUARIOS</h2>
+              <table class="showcurrent">
+                  <tr>
+                      <td class="nombre">Login: </td>
+                      <td class="datos">aliasme</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre">DNI: </td>
+                      <td class="datos">40061622S</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre">Nombre:</td>
+                      <td class="datos">Paula</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre">Apellidos: </td>
+                      <td class="datos">Rodríguez Díaz</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre">Teléfono: </td>
+                      <td class="datos">988234167</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre">Email: </td>
+                      <td class="datos">prdiaz@esei.uvigo.es</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre">Fecha de Nacimiento: </td>
+                      <td class="datos">22/02/1992</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre"> Grupo de Prácticas</td>
+                      <td class="datos">IU3</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre"> Curso Académico</td>
+                      <td class="datos">3</td>
+                  </tr>
+                  <tr>
+                      <td class="nombre"> Titulación</td>
+                      <td class="datos">Grado en Ingeniería Informática</td>
+                  </tr>
+              </table>
+        </div>
+      </div>
+    </div>
+    </body>
+    <footer>
+      <p>Página creada por 0peox5 </p>
+        <p> Fecha creación: 19/09/2017</p>
+    </footer>
+  </html>
