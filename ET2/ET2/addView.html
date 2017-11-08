@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Add</title>
+</head>
+<body>
+<div class="formAlta">
+    <h2>FORMULARIO ADD</h2>
+    <form action="" method="post" name="insertForm" onsubmit=" return validarForm(this)">
+        <label>DNI <br>
+            <input id="dni" name="DNI" maxlength="9" required onchange="comprobarDni(this)" type="text"><br>
+        </label><br>
+        <label> Nombre<br>
+            <input id="nombre" name="Nombre" maxlength="25" required onchange="comprobarTexto(this,25) " type="text"><br>
+        </label><br>
+        <label> Apellidos<br>
+            <input id="apellidos" name="Apellidos" maxlength="50" required onchange="comprobarTexto(this,50)"
+                   type="text"><br>
+        </label><br>
+        <label> Teléfono<br>
+            <input id="telf" name="Telefono" maxlength="13" required onchange="comprobarTelf(this, 13)"
+                   type="text"><br>
+        </label><br>
+        <label> E-mail<br>
+            <input id="mail" name="Mail" maxlength="50" required onchange="comprobarEmail(this,50)"
+                   type="text"><br>
+        </label><br>
+        <label> Fecha de Nacimiento<br>
+            <input class="tcal" type="date" id="nacimiento" required readonly name="Fecha_Nacimiento"  onchange="comprobarVacio(this)" ><br>
+        </label><br>
+        <label> Sexo<br>
+            <input type="radio" name="mujer" value="Mujer"> Mujer <br>
+            <input type="radio" name="hombre" value="Hombre"> Hombre <br>
+        </label><br>
+        <label> Curso académico<br>
+            <input id="curso" name="Curso" maxlength="1" required onchange="comprobarEntero(this,1,9)"
+                   type="number"><br>
+        </label><br>
+        <label> Titulación<br>
+            <input id="tit" name="Titulacion" maxlength="60" required onchange="comprobarTexto(this, 60)"
+                   type="text"><br>
+        </label><br>
+        <br>
+        <button type="submit"> Añadir </button>
+    </form>
+</body>
+</html>
